@@ -1,0 +1,793 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Browse twelve fictional Star Wars: The Empire Strikes Back fan merchandise items."
+    >
+
+    <title>Products | The Empire Strikes Back - BOOTSTRAPFLIX</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="rsc/css/style.css">
+
+    <!-- Product Image CSS -->
+    <style>
+        /* Product image container */
+        .product-art.product-photo {
+            height: 225px;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 35%, #292e38, #111318 75%);
+        }
+
+        /* Actual product images */
+        .product-art.product-photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+            position: relative;
+            z-index: 2;
+            transition: transform .3s ease;
+        }
+
+        /* Remove the old decorative circle */
+        .product-art.product-photo::before {
+            display: none;
+            content: none;
+        }
+
+        /* Image hover effect */
+        .product-card:hover .product-art.product-photo img {
+            transform: scale(1.06);
+        }
+
+        /* Mobile image size */
+        @media (max-width: 767px) {
+            .product-art.product-photo {
+                height: 170px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
+        <div class="container">
+
+            <a class="navbar-brand brand-mark" href="index.html">
+                <span class="brand-symbol">B</span> BOOTSTRAP<span>FLIX</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#cinema">Cinema</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="characters.html">Characters</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link cart-nav" href="#cart">
+                            <i class="bi bi-bag"></i>
+                            Cart
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ==================== PAGE HERO ==================== -->
+    <header class="page-hero products-hero">
+        <div class="container">
+
+            <p class="eyebrow">THE GALAXY'S COLLECTOR CORNER</p>
+
+            <h1>OFFICIAL-STYLE <span>MERCH</span></h1>
+
+            <p>
+                Explore a collection of twelve fan-made merchandise
+                concepts inspired by Episode V.
+            </p>
+
+        </div>
+    </header>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+
+        <section class="section-pad">
+            <div class="container">
+
+                <!-- Shop Heading -->
+                <div class="shop-toolbar">
+
+                    <div>
+                        <p class="eyebrow mb-1">COLLECT YOUR FAVORITES</p>
+                        <h2>THE <span>COLLECTION</span></h2>
+                    </div>
+
+                    <div class="shop-count">
+                        <i class="bi bi-grid"></i>
+                        12 ITEMS · 4 × 3 GRID
+                    </div>
+
+                </div>
+
+
+                <!-- ==================== PRODUCT GRID ==================== -->
+                <div class="row g-4" id="productGrid">
+
+
+                    <!-- Product 1: Classic Movie Poster -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-poster">
+                                <img
+                                    src="media/products/poster.png"
+                                    alt="Classic Star Wars Episode V movie poster"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Classic Movie Poster</h3>
+
+                                <p>
+                                    Collector-style wall poster featuring
+                                    a dramatic Episode V design.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱450.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="poster"
+                                        data-name="Classic Movie Poster"
+                                        data-price="450"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 2: Episode V T-Shirt -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-shirt">
+                                <img
+                                    src="media/products/EP5Tshirt.png"
+                                    alt="Star Wars Episode V T-shirt"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Episode V T-Shirt</h3>
+
+                                <p>
+                                    Black graphic tee concept for fans
+                                    of the original trilogy.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱799.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="shirt"
+                                        data-name="Episode V T-Shirt"
+                                        data-price="799"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 3: Dark Side Coffee Mug -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-mug">
+                                <img
+                                    src="media/products/mug.png"
+                                    alt="Dark Side Star Wars coffee mug"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Dark Side Coffee Mug</h3>
+
+                                <p>
+                                    Ceramic mug concept with a bold
+                                    black-and-red design.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱350.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="mug"
+                                        data-name="Dark Side Coffee Mug"
+                                        data-price="350"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 4: Luke Skywalker Figure -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-figure">
+                                <img
+                                    src="media/products/lukefigure.png"
+                                    alt="Luke Skywalker collectible figure"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Luke Skywalker Figure</h3>
+
+                                <p>
+                                    Display figure concept inspired by
+                                    Luke's Hoth-era look.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱1,250.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="luke"
+                                        data-name="Luke Skywalker Figure"
+                                        data-price="1250"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 5: Darth Vader Helmet Replica -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-vader">
+                                <img
+                                    src="media/products/helmetreplica.png"
+                                    alt="Darth Vader helmet replica"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Darth Vader Helmet Replica</h3>
+
+                                <p>
+                                    Decorative helmet collectible
+                                    concept for your shelf.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱2,800.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="helmet"
+                                        data-name="Darth Vader Helmet Replica"
+                                        data-price="2800"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 6: LED Lightsaber Toy -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-saber">
+                                <img
+                                    src="media/products/lightsaber.png"
+                                    alt="LED Star Wars lightsaber toy"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>LED Lightsaber Toy</h3>
+
+                                <p>
+                                    Light-up toy prop concept with
+                                    a collectible display stand.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱1,100.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="saber"
+                                        data-name="LED Lightsaber Toy"
+                                        data-price="1100"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 7: Rebel Alliance Cap -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-cap">
+                                <img
+                                    src="media/products/rebelcap.png"
+                                    alt="Rebel Alliance cap"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Rebel Alliance Cap</h3>
+
+                                <p>
+                                    Everyday cap concept with an
+                                    embroidered Rebel-inspired mark.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱550.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="cap"
+                                        data-name="Rebel Alliance Cap"
+                                        data-price="550"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 8: Galaxy Notebook -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-notebook">
+                                <img
+                                    src="media/products/galaxynotebook.png"
+                                    alt="Galaxy themed notebook"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Galaxy Notebook</h3>
+
+                                <p>
+                                    Hardcover notebook concept for notes,
+                                    sketches, and plans.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱280.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="notebook"
+                                        data-name="Galaxy Notebook"
+                                        data-price="280"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 9: Droid Keychain -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-keychain">
+                                <img
+                                    src="media/products/keychain.png"
+                                    alt="Droid inspired keychain"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Droid Keychain</h3>
+
+                                <p>
+                                    Mini droid-inspired keychain concept
+                                    for your everyday keys.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱180.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="keychain"
+                                        data-name="Droid Keychain"
+                                        data-price="180"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 10: Rebel Canvas Tote -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-tote">
+                                <img
+                                    src="media/products/tote.png"
+                                    alt="Rebel Alliance canvas tote bag"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Rebel Canvas Tote</h3>
+
+                                <p>
+                                    Reusable tote bag concept with
+                                    a minimalist Rebel design.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱390.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="tote"
+                                        data-name="Rebel Canvas Tote"
+                                        data-price="390"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 11: Episode V Enamel Pin Set -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-pin">
+                                <img
+                                    src="media/products/pinset.png"
+                                    alt="Episode V enamel pin collection"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Episode V Enamel Pin Set</h3>
+
+                                <p>
+                                    Three-piece collectible pin set
+                                    concept in a display card.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱320.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="pins"
+                                        data-name="Episode V Enamel Pin Set"
+                                        data-price="320"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Product 12: Galaxy Throw Pillow -->
+                    <div class="col-6 col-lg-3">
+                        <article class="product-card">
+
+                            <div class="product-art product-photo art-pillow">
+                                <img
+                                    src="media/products/starpillow.png"
+                                    alt="Galaxy themed decorative throw pillow"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Galaxy Throw Pillow</h3>
+
+                                <p>
+                                    Soft decorative pillow concept
+                                    with a starfield-inspired print.
+                                </p>
+
+                                <div class="product-bottom">
+                                    <strong>₱690.00</strong>
+
+                                    <button
+                                        class="btn-add"
+                                        data-id="pillow"
+                                        data-name="Galaxy Throw Pillow"
+                                        data-price="690"
+                                    >
+                                        <i class="bi bi-plus-lg"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </div>
+
+
+                <!-- ==================== SHOPPING CART ==================== -->
+                <section class="cart-panel mt-5" id="cart">
+
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+
+                        <div>
+                            <p class="eyebrow mb-1">YOUR SELECTION</p>
+                            <h2>SHOPPING <span>CART</span></h2>
+                        </div>
+
+                        <button
+                            class="btn btn-outline-light btn-sm"
+                            id="clearCart"
+                        >
+                            CLEAR CART
+                        </button>
+
+                    </div>
+
+                    <div id="cartItems" class="cart-items mt-3">
+                        <p class="empty-cart">
+                            Your cart is empty. Add something from
+                            the collection above.
+                        </p>
+                    </div>
+
+                    <div class="cart-total">
+                        <span>TOTAL</span>
+                        <strong id="cartTotal">₱0.00</strong>
+                    </div>
+
+                    <button
+                        class="btn btn-danger mt-3"
+                        id="checkoutBtn"
+                        disabled
+                    >
+                        PLACE DEMO ORDER
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+
+                    <p class="cart-disclaimer">
+                        Student project demo only — no real payment
+                        or order will be processed.
+                    </p>
+
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Website Branding -->
+                <div class="col-md-4">
+
+                    <a class="navbar-brand brand-mark" href="index.html">
+                        <span class="brand-symbol">B</span>
+                        BOOTSTRAP<span>FLIX</span>
+                    </a>
+
+                    <p class="footer-muted mt-3">
+                        A fan-made movie showcase from a galaxy far, far away.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- Developers -->
+                <div class="col-md-4">
+
+                    <h4>DEVELOPED BY</h4>
+
+                    <p class="footer-muted">
+                        WD1 Team<br>
+
+                        <span class="small">
+                            Replace this line with your group members' names.
+                        </span>
+                    </p>
+
+                </div>
+
+
+                <!-- Footer Navigation -->
+                <div class="col-md-4">
+
+                    <h4>EXPLORE</h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html#cinema">Cinema</a>
+                        </li>
+
+                        <li>
+                            <a href="characters.html">Characters</a>
+                        </li>
+
+                        <li>
+                            <a href="products.html">Products</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                © 2026 BOOTSTRAPFLIX Student Project · Unofficial fan-made website.
+                Star Wars and related properties belong to their respective owners.
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="rsc/js/script.js"></script>
+
+</body>
+</html>
