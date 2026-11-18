@@ -27,3 +27,11 @@ Open `index.html` in a browser, or use the VS Code Live Server extension.
 Film information and credits were cross-checked against Lucasfilm, StarWars.com, and the AFI Catalog. Bootstrap is loaded from the official jsDelivr CDN.
 
 This is an unofficial educational fan project. Star Wars names, characters, and related marks belong to their respective owners.
+
+MEMBERS:
+
+LEO, Cordova C.
+PADILLA, Justine Paul R.
+VILLANUEVA, John Michael S.
+LAMAYO, Mhel Jairus E.
+ABECIA, Kemrick A.
